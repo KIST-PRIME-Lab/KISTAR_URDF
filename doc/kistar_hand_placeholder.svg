@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" width="480" height="320">
+  <defs>
+    <linearGradient id="bg-hand" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#1f2937"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="palm-grad" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#475569"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+    <linearGradient id="finger-grad" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#94a3b8"/>
+      <stop offset="100%" stop-color="#475569"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="480" height="320" fill="url(#bg-hand)"/>
+
+  <!-- Title -->
+  <text x="240" y="34" text-anchor="middle" font-family="Helvetica, Arial, sans-serif"
+        font-size="18" font-weight="700" fill="#e2e8f0" letter-spacing="2">
+    KISTAR HAND  ·  Ver2
+  </text>
+  <text x="240" y="54" text-anchor="middle" font-family="Helvetica, Arial, sans-serif"
+        font-size="11" fill="#94a3b8">
+    4 fingers  ·  16 joints  ·  13 actuators  ·  PRIME Lab
+  </text>
+
+  <!-- palm -->
+  <g transform="translate(240,210)">
+    <rect x="-55" y="-15" width="110" height="80" rx="14" fill="url(#palm-grad)" stroke="#1e293b" stroke-width="1.5"/>
+
+    <!-- thumb -->
+    <g transform="rotate(-55) translate(0,-12)">
+      <rect x="-8" y="-46" width="16" height="46" rx="6" fill="url(#finger-grad)" stroke="#1e293b"/>
+      <rect x="-7" y="-78" width="14" height="32" rx="6" fill="url(#finger-grad)" stroke="#1e293b"/>
+      <rect x="-6" y="-100" width="12" height="22" rx="5" fill="url(#finger-grad)" stroke="#1e293b"/>
+    </g>
+
+    <!-- index -->
+    <g transform="translate(-30,-12)">
+      <rect x="-7" y="-50" width="14" height="50" rx="6" fill="url(#finger-grad)" stroke="#1e293b"/>
+      <rect x="-6" y="-86" width="12" height="36" rx="5" fill="url(#finger-grad)" stroke="#1e293b"/>
+      <rect x="-5" y="-110" width="10" height="24" rx="4" fill="url(#finger-grad)" stroke="#1e293b"/>
+    </g>
+
+    <!-- middle -->
+    <g transform="translate(0,-15)">
+      <rect x="-7" y="-58" width="14" height="58" rx="6" fill="url(#finger-grad)" stroke="#1e293b"/>
+      <rect x="-6" y="-94" width="12" height="36" rx="5" fill="url(#finger-grad)" stroke="#1e293b"/>
+      <rect x="-5" y="-120" width="10" height="26" rx="4" fill="url(#finger-grad)" stroke="#1e293b"/>
+    </g>
+
+    <!-- ring -->
+    <g transform="translate(30,-12)">
+      <rect x="-7" y="-50" width="14" height="50" rx="6" fill="url(#finger-grad)" stroke="#1e293b"/>
+      <rect x="-6" y="-86" width="12" height="36" rx="5" fill="url(#finger-grad)" stroke="#1e293b"/>
+      <rect x="-5" y="-110" width="10" height="24" rx="4" fill="url(#finger-grad)" stroke="#1e293b"/>
+    </g>
+  </g>
+
+  <!-- Footer hint -->
+  <text x="240" y="300" text-anchor="middle" font-family="Helvetica, Arial, sans-serif"
+        font-size="10" fill="#64748b">
+    placeholder  replace with rendered preview (see doc/RENDER.md)
+  </text>
+</svg>

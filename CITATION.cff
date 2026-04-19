@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+title: "KISTAR Hand URDF / MJCF Distribution"
+message: "If you use these models in your research, please cite this repository."
+type: software
+authors:
+  - family-names: "Lee"
+    given-names: "Jaesung"
+    email: "wotjdslacjsw@naver.com"
+    affiliation: "PRIME Lab, Hanyang University"
+abstract: >-
+  URDF and MuJoCo MJCF descriptions of the KISTAR Hand
+  (KISTAR Hand Ver2 and KISTAR-SON left/right) developed at
+  PRIME Lab, Hanyang University.
+license: BSD-3-Clause
+repository-code: "https://github.com/JayLee00/KISTAR_URDF"
+keywords:
+  - robotic-hand
+  - dexterous-manipulation
+  - urdf
+  - mujoco
+  - mjcf
+  - kistar-hand

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" width="480" height="320">
+  <defs>
+    <linearGradient id="bg-son-r" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#1f2937"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="palm-r" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#475569"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+    <linearGradient id="finger-r" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#a3b8d0"/>
+      <stop offset="100%" stop-color="#475569"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="480" height="320" fill="url(#bg-son-r)"/>
+
+  <text x="240" y="34" text-anchor="middle" font-family="Helvetica, Arial, sans-serif"
+        font-size="18" font-weight="700" fill="#e2e8f0" letter-spacing="2">
+    KISTAR-SON  ·  RIGHT
+  </text>
+  <text x="240" y="54" text-anchor="middle" font-family="Helvetica, Arial, sans-serif"
+        font-size="11" fill="#94a3b8">
+    5 fingers  ·  20 joints  ·  15 actuators  ·  PRIME Lab
+  </text>
+
+  <g transform="translate(240,210)">
+    <rect x="-60" y="-15" width="120" height="80" rx="14" fill="url(#palm-r)" stroke="#1e293b" stroke-width="1.5"/>
+
+    <!-- thumb (right hand: thumb on left side) -->
+    <g transform="translate(-50,5) rotate(-50)">
+      <rect x="-8" y="-44" width="16" height="44" rx="6" fill="url(#finger-r)" stroke="#1e293b"/>
+      <rect x="-7" y="-72" width="14" height="28" rx="6" fill="url(#finger-r)" stroke="#1e293b"/>
+      <rect x="-6" y="-92" width="12" height="20" rx="5" fill="url(#finger-r)" stroke="#1e293b"/>
+    </g>
+
+    <!-- index, middle, ring, little -->
+    <g transform="translate(-30,-12)">
+      <rect x="-7" y="-46" width="14" height="46" rx="6" fill="url(#finger-r)" stroke="#1e293b"/>
+      <rect x="-6" y="-80" width="12" height="34" rx="5" fill="url(#finger-r)" stroke="#1e293b"/>
+      <rect x="-5" y="-104" width="10" height="24" rx="4" fill="url(#finger-r)" stroke="#1e293b"/>
+    </g>
+    <g transform="translate(-5,-15)">
+      <rect x="-7" y="-54" width="14" height="54" rx="6" fill="url(#finger-r)" stroke="#1e293b"/>
+      <rect x="-6" y="-88" width="12" height="34" rx="5" fill="url(#finger-r)" stroke="#1e293b"/>
+      <rect x="-5" y="-114" width="10" height="26" rx="4" fill="url(#finger-r)" stroke="#1e293b"/>
+    </g>
+    <g transform="translate(20,-12)">
+      <rect x="-7" y="-50" width="14" height="50" rx="6" fill="url(#finger-r)" stroke="#1e293b"/>
+      <rect x="-6" y="-84" width="12" height="34" rx="5" fill="url(#finger-r)" stroke="#1e293b"/>
+      <rect x="-5" y="-108" width="10" height="24" rx="4" fill="url(#finger-r)" stroke="#1e293b"/>
+    </g>
+    <g transform="translate(45,-6)">
+      <rect x="-6" y="-38" width="12" height="38" rx="5" fill="url(#finger-r)" stroke="#1e293b"/>
+      <rect x="-5" y="-66" width="10" height="28" rx="4" fill="url(#finger-r)" stroke="#1e293b"/>
+    </g>
+  </g>
+
+  <text x="240" y="300" text-anchor="middle" font-family="Helvetica, Arial, sans-serif"
+        font-size="10" fill="#64748b">
+    placeholder  replace with rendered preview (see doc/RENDER.md)
+  </text>
+</svg>

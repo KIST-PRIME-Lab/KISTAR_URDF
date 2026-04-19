@@ -1,0 +1,34 @@
+# --- Original/working folders (kept locally only, not pushed) ----------
+20260419_KISTAR_SON_URDF_BI/
+\[20250816\]Ver2_kistar_hand_description_JS*/
+
+# --- Python ------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# --- IDE / editors -----------------------------------------------------
+.vscode/
+.idea/
+.cursor/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# --- MuJoCo / sim outputs ---------------------------------------------
+output/
+*.mp4
+*.gif
+*.log
+mjkey.txt
+
+# --- Build / dist ------------------------------------------------------
+build/
+dist/
+*.tmp
