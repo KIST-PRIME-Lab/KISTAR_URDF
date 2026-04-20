@@ -13,15 +13,21 @@ each robot lives under `robots/hands/<model_name>/` together with its meshes.
 
 ## Models
 
-| Robot Model      | Visual                                                                  | Collision                                                              | Format                |
-| ---------------- | ----------------------------------------------------------------------- | ---------------------------------------------------------------------- | --------------------- |
-| **KISTAR Hand**  | ![kistar_hand_visual](doc/kistar_hand_placeholder.svg)                  | ![kistar_hand_collision](doc/kistar_hand_placeholder.svg)              | URDF + MJCF           |
-| **KISTAR-SON (R)** | ![kistar_son_right_visual](doc/kistar_son_right_placeholder.svg)      | ![kistar_son_right_collision](doc/kistar_son_right_placeholder.svg)    | URDF + MJCF           |
-| **KISTAR-SON (L)** | ![kistar_son_left_visual](doc/kistar_son_left_placeholder.svg)        | ![kistar_son_left_collision](doc/kistar_son_left_placeholder.svg)      | URDF + MJCF           |
+| Robot Model        | Animation                                                          | Still pose                                                   | Format       |
+| ------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------ | ------------ |
+| **KISTAR Hand**    | ![kistar_hand animation](doc/kistar_hand.gif)                      | ![kistar_hand still](doc/kistar_hand.png)                    | URDF + MJCF  |
+| **KISTAR-SON (R)** | ![kistar_son_right animation](doc/kistar_son_right.gif)            | ![kistar_son_right still](doc/kistar_son_right.png)          | URDF + MJCF  |
+| **KISTAR-SON (L)** | ![kistar_son_left animation](doc/kistar_son_left.gif)              | ![kistar_son_left still](doc/kistar_son_left.png)            | URDF + MJCF  |
 
-> The placeholder SVGs above will be replaced with rendered animations / collision figures
-> (the same way [`dex-urdf`](https://github.com/KIST-PRIME-Lab/dex-urdf) renders models with SAPIEN).
-> See [`doc/RENDER.md`](doc/RENDER.md) for the recommended rendering workflow.
+> The preview GIFs and PNGs above are generated directly from the MJCF files.
+> Reproduce them any time with:
+>
+> ```bash
+> python tools/render_previews.py
+> ```
+>
+> See [`doc/RENDER.md`](doc/RENDER.md) for alternative rendering workflows
+> (MuJoCo viewer screenshots, SAPIEN ray tracing, yourdfpy).
 
 ---
 

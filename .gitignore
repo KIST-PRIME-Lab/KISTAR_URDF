@@ -25,6 +25,8 @@ Thumbs.db
 output/
 *.mp4
 *.gif
+# ...but keep README preview animations
+!doc/*.gif
 *.log
 mjkey.txt
 
