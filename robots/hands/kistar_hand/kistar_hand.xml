@@ -1,7 +1,7 @@
 <!--
 ================================================================
   KISTAR Hand (Ver2) - MuJoCo MJCF
-  Converted from kistar_hand.urdf (Made by Jaesung Lee, PRIME Lab)
+  Converted from kistar_hand.urdf (Made by Jaesung Lee, Korea Institute of Science and Technology)
   Last update: 2026-04-19
 ================================================================
   Joints     : 16 hinge joints (3 mimic via equality constraint)

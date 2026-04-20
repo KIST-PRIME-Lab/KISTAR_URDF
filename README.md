@@ -1,13 +1,13 @@
 # KISTAR_URDF
 
 Open-source **URDF** and **MuJoCo MJCF** distribution of the KISTAR Hand family,
-developed at [PRIME Lab](https://www.dhwanglab.com/home), Hanyang University.
+developed at [Korea Institute of Science and Technology](https://www.kist.re.kr).
 
 This repository follows the structural convention of
 [KIST-PRIME-Lab/dex-urdf](https://github.com/KIST-PRIME-Lab/dex-urdf), so
 each robot lives under `robots/hands/<model_name>/` together with its meshes.
 
-> Maintainer / model author: **Jaesung Lee** &nbsp;·&nbsp; Copyright © 2026 PRIME Lab &nbsp;·&nbsp; License: **BSD-3-Clause**
+> Maintainer / model author: **Jaesung Lee** &nbsp;·&nbsp; Copyright © 2026 Korea Institute of Science and Technology &nbsp;·&nbsp; License: **BSD-3-Clause**
 
 ---
 
@@ -29,7 +29,7 @@ each robot lives under `robots/hands/<model_name>/` together with its meshes.
 
 ```
 KISTAR_URDF/
-├── LICENSE                        # BSD-3-Clause (PRIME Lab)
+├── LICENSE                        # BSD-3-Clause (Korea Institute of Science and Technology)
 ├── CITATION.cff
 ├── README.md                      # this file
 ├── doc/                           # placeholder figures + render guide
@@ -128,10 +128,10 @@ robot.show()
 
 ## Robot Source
 
-| Robot Model    | Lab / Author              | License | Origin                                                                                   |
-| -------------- | ------------------------- | ------- | ---------------------------------------------------------------------------------------- |
-| KISTAR Hand    | Jaesung Lee, PRIME Lab    | BSD-3   | [KIST-PRIME-Lab/Franka_Dual_Arm_PtoP](https://github.com/KIST-PRIME-Lab/Franka_Dual_Arm_PtoP) |
-| KISTAR-SON     | Jaesung Lee, PRIME Lab    | BSD-3   | PRIME Lab internal                                                                       |
+| Robot Model    | Author / Affiliation                                          | License | Origin                                                                                   |
+| -------------- | ------------------------------------------------------------- | ------- | ---------------------------------------------------------------------------------------- |
+| KISTAR Hand    | Jaesung Lee, Korea Institute of Science and Technology        | BSD-3   | [KIST-PRIME-Lab/Franka_Dual_Arm_PtoP](https://github.com/KIST-PRIME-Lab/Franka_Dual_Arm_PtoP) |
+| KISTAR-SON     | Jaesung Lee, Korea Institute of Science and Technology        | BSD-3   | KIST internal                                                                            |
 
 Reference repositories that inspired this layout:
 
@@ -148,7 +148,7 @@ If you use these models, please cite:
   title  = {KISTAR Hand URDF / MJCF Distribution},
   author = {Jaesung Lee},
   year   = {2026},
-  note   = {PRIME Lab, Hanyang University},
+  note   = {Korea Institute of Science and Technology},
   url    = {https://github.com/JayLee00/KISTAR_URDF}
 }
 ```
@@ -157,5 +157,5 @@ If you use these models, please cite:
 
 ## License
 
-[BSD-3-Clause](LICENSE) © 2026 PRIME Lab, Hanyang University.
-Maintainer: **Jaesung Lee** &lt;wotjdslacjsw@naver.com&gt;.
+[BSD-3-Clause](LICENSE) © 2026 Korea Institute of Science and Technology.
+Maintainer: **Jaesung Lee** &lt;jay.lee@kist.re.kr&gt;.

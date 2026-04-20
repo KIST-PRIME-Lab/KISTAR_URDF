@@ -5,12 +5,12 @@ type: software
 authors:
   - family-names: "Lee"
     given-names: "Jaesung"
-    email: "wotjdslacjsw@naver.com"
-    affiliation: "PRIME Lab, Hanyang University"
+    email: "jay.lee@kist.re.kr"
+    affiliation: "Korea Institute of Science and Technology"
 abstract: >-
   URDF and MuJoCo MJCF descriptions of the KISTAR Hand
   (KISTAR Hand Ver2 and KISTAR-SON left/right) developed at
-  PRIME Lab, Hanyang University.
+  Korea Institute of Science and Technology.
 license: BSD-3-Clause
 repository-code: "https://github.com/JayLee00/KISTAR_URDF"
 keywords:

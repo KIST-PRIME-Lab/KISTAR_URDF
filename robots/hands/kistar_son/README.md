@@ -1,12 +1,12 @@
 # KISTAR-SON
 
 5-finger anthropomorphic hand (left + right) developed at
-[PRIME Lab](https://www.dhwanglab.com/home), Hanyang University.
+[Korea Institute of Science and Technology](https://www.kist.re.kr).
 
 | Field            | Value                                                       |
 | ---------------- | ----------------------------------------------------------- |
 | Author           | Jaesung Lee                                                 |
-| Lab              | PRIME Lab, Hanyang University                               |
+| Affiliation      | Korea Institute of Science and Technology                   |
 | License          | BSD-3-Clause                                                |
 | Last update      | 2026-04-19                                                  |
 | Right URDF       | [`kistar_son_right_mockup.urdf`](kistar_son_right_mockup.urdf) |
@@ -75,5 +75,5 @@ Do **not** rename any STL or `01_kistar_son_STL/` folder.
 
 ## License
 
-BSD-3-Clause © 2026 PRIME Lab, Hanyang University.
-Author: **Jaesung Lee** &lt;wotjdslacjsw@naver.com&gt;.
+BSD-3-Clause © 2026 Korea Institute of Science and Technology.
+Author: **Jaesung Lee** &lt;jay.lee@kist.re.kr&gt;.

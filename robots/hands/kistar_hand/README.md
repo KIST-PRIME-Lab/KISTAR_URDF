@@ -1,12 +1,12 @@
 # KISTAR Hand (Ver2)
 
-4-finger anthropomorphic hand developed at [PRIME Lab](https://www.dhwanglab.com/home),
-Hanyang University.
+4-finger anthropomorphic hand developed at
+[Korea Institute of Science and Technology](https://www.kist.re.kr).
 
 | Field            | Value                                       |
 | ---------------- | ------------------------------------------- |
 | Author           | Jaesung Lee                                 |
-| Lab              | PRIME Lab, Hanyang University               |
+| Affiliation      | Korea Institute of Science and Technology   |
 | License          | BSD-3-Clause                                |
 | Last update      | 2026-04-19                                  |
 | URDF             | [`kistar_hand.urdf`](kistar_hand.urdf)      |
@@ -19,7 +19,7 @@ Hanyang University.
 
 ```
 kistar_hand/
-├── kistar_hand.urdf            # original URDF (Made by Jaesung Lee, PRIME Lab)
+├── kistar_hand.urdf            # original URDF (Made by Jaesung Lee, KIST)
 ├── kistar_hand.xml             # MuJoCo MJCF auto-derived from the URDF
 ├── README.md
 └── meshes/kistar/
@@ -113,5 +113,5 @@ Compatible with: yourdfpy, RViz, Gazebo, IsaacGym, IsaacSim, SAPIEN, PyBullet.
 
 ## License
 
-BSD-3-Clause © 2026 PRIME Lab, Hanyang University.
-Author: **Jaesung Lee** &lt;wotjdslacjsw@naver.com&gt;.
+BSD-3-Clause © 2026 Korea Institute of Science and Technology.
+Author: **Jaesung Lee** &lt;jay.lee@kist.re.kr&gt;.
