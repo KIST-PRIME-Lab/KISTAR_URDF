@@ -1,9 +1,11 @@
 <?xml version="1.0" ?>
-<!--Made by Jaesung Lee from Korea Institute of Science and Technology / Last update: 2025-09-09-->
-<!--Updated by Sungwoo Park from Korea Institute of Science and Technology / Last update: 2025-09-10-->
-<!--Updated by Jaesung Lee from Korea Institute of Science and Technology / Last update: 2025-09-15-->
-<!--Updated by Jaesung Lee from Korea Institute of Science and Technology / Last update: 2025-12-15-->
-<!--Updated by Jaesung Lee from Korea Institute of Science and Technology / Last update: 2026-04-17-->
+<!--Made by Jaesung Lee from PRIME Lab/ Last update: 2025-09-09-->
+<!--Updated by Sungwoo Park from PRIME Lab/ Last update: 2025-09-10-->
+<!--Updated by Jaesung Lee from PRIME Lab/ Last update: 2025-09-15-->
+<!--Updated by Jaesung Lee from PRIME Lab/ Last update: 2025-12-15-->
+<!--Updated by Jaesung Lee from PRIME Lab/ Last update: 2026-04-17-->
+<!--Updated by Jaesung Lee from PRIME Lab/ Last update: 2026-05-22-->
+<!--Updated by Jaesung Lee from PRIME Lab/ Last update: 2026-05-31-->
 
 <robot name="KISTAR_SON_RIGHT">
 
@@ -13,7 +15,7 @@
       <flag contact="disable"/>
     </option>
     <default>
-      <position kp="2" kv="0.1" forcerange="-0.2 0.2"/>
+      <position kp="30" kv="0.7" forcerange="-100 100"/>
     </default>
     <actuator>
       <!-- THUMB (thumb_5 is mimic of thumb_4 - not actuated) -->
@@ -55,8 +57,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_base_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
     </link>
@@ -76,8 +78,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_base_front_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
     </link>
@@ -88,7 +90,34 @@
       <child link="right_hand_base_front_link"/>
     </joint>
 
-        <link name="right_hand_base_back_link">
+    <link name="right_hand_base_front_2_link">
+      <collision>
+        <geometry>
+          <mesh filename="01_kistar_son_STL/right_hand_base_front_2_link.STL"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass value="0."/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+      </inertial>
+      <visual>
+        <geometry>
+          <mesh filename="01_kistar_son_STL/right_hand_base_front_2_link.STL"/>
+        </geometry>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
+        </material>
+      </visual>
+    </link>
+
+    <joint name="right_hand_base_front_2_joint" type="fixed">
+      <origin rpy="0. 0. 0." xyz="0. 0. 0."/>
+      <parent link="right_hand_base_link"/>
+      <child link="right_hand_base_front_2_link"/>
+    </joint>
+
+    <link name="right_hand_base_back_link">
       <collision>
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_base_back_link.STL"/>
@@ -103,8 +132,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_base_back_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="SpaceGray">
+          <color rgba="0.741176 0.737255 0.760784 1"/>
         </material>
       </visual>
     </link>
@@ -133,8 +162,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_thumb_base_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
     </link>
@@ -160,8 +189,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_thumb_0_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="SpaceGray">
+          <color rgba="0.741176 0.737255 0.760784 1"/>
         </material>
       </visual>
     </link>
@@ -191,8 +220,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_thumb_1_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="SpaceGray">
+          <color rgba="0.741176 0.737255 0.760784 1"/>
         </material>
       </visual>
     </link>
@@ -221,14 +250,14 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_thumb_2_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
     </link>
 
     <joint name="right_hand_thumb_2_joint" type="revolute">
-      <axis xyz="0 1 0"/>
+      <axis xyz="0 -1 0"/>
       <limit effort="0.2" lower="-1.0472" upper="1.0472" velocity="2.6"/>
       <origin rpy="0.7854 0. 0." xyz="0. 0.01303 0.01303"/>
       <parent link="right_hand_thumb_1_link"/>
@@ -252,8 +281,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_thumb_2_upper_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
     </link>
@@ -279,8 +308,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_thumb_2_front_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
     </link>
@@ -306,8 +335,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_thumb_2_back_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="SpaceGray">
+          <color rgba="0.741176 0.737255 0.760784 1"/>
         </material>
       </visual>
     </link>
@@ -333,8 +362,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_thumb_3_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
     </link>
@@ -364,8 +393,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_thumb_3_front_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
     </link>
@@ -391,8 +420,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_thumb_3_back_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="SpaceGray">
+          <color rgba="0.741176 0.737255 0.760784 1"/>
         </material>
       </visual>
     </link>
@@ -418,8 +447,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_thumb_4_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
     </link>
@@ -449,8 +478,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_thumb_4_front_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
     </link>
@@ -476,8 +505,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_thumb_4_back_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="SpaceGray">
+          <color rgba="0.741176 0.737255 0.760784 1"/>
         </material>
       </visual>
     </link>
@@ -506,8 +535,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_finger_0_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
     </link>
@@ -537,8 +566,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_finger_0_upper_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
     </link>
@@ -564,8 +593,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_finger_1_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
     </link>
@@ -594,8 +623,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_finger_1_upper_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
     </link>
@@ -621,8 +650,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_finger_1_front_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
     </link>
@@ -648,8 +677,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_finger_1_back_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="SpaceGray">
+          <color rgba="0.741176 0.737255 0.760784 1"/>
         </material>
       </visual>
     </link>
@@ -675,8 +704,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_finger_2_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
     </link>
@@ -705,8 +734,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_finger_2_front_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
     </link>
@@ -732,8 +761,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_finger_2_back_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="SpaceGray">
+          <color rgba="0.741176 0.737255 0.760784 1"/>
         </material>
       </visual>
     </link>
@@ -759,8 +788,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_finger_3_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
     </link>
@@ -790,8 +819,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_finger_3_front_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
     </link>
@@ -817,8 +846,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_finger_3_back_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="SpaceGray">
+          <color rgba="0.741176 0.737255 0.760784 1"/>
         </material>
       </visual>
     </link>
@@ -845,8 +874,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_finger_0_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
     </link>
@@ -876,8 +905,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_finger_0_upper_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
     </link>
@@ -903,8 +932,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_finger_1_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
     </link>
@@ -933,8 +962,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_finger_1_upper_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
     </link>
@@ -960,8 +989,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_finger_1_front_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
     </link>
@@ -987,8 +1016,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_finger_1_back_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="SpaceGray">
+          <color rgba="0.741176 0.737255 0.760784 1"/>
         </material>
       </visual>
     </link>
@@ -1014,8 +1043,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_finger_2_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
     </link>
@@ -1044,8 +1073,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_finger_2_front_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
     </link>
@@ -1071,8 +1100,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_finger_2_back_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="SpaceGray">
+          <color rgba="0.741176 0.737255 0.760784 1"/>
         </material>
       </visual>
     </link>
@@ -1098,8 +1127,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_finger_3_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
     </link>
@@ -1129,8 +1158,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_finger_3_front_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
     </link>
@@ -1156,8 +1185,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_finger_3_back_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="SpaceGray">
+          <color rgba="0.741176 0.737255 0.760784 1"/>
         </material>
       </visual>
     </link>
@@ -1184,8 +1213,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_finger_0_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
     </link>
@@ -1215,8 +1244,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_finger_0_upper_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
     </link>
@@ -1242,8 +1271,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_finger_1_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
     </link>
@@ -1272,8 +1301,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_finger_1_upper_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
     </link>
@@ -1299,8 +1328,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_finger_1_front_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
     </link>
@@ -1326,8 +1355,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_finger_1_back_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="SpaceGray">
+          <color rgba="0.741176 0.737255 0.760784 1"/>
         </material>
       </visual>
     </link>
@@ -1353,8 +1382,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_finger_2_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
     </link>
@@ -1383,8 +1412,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_finger_2_front_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
     </link>
@@ -1410,8 +1439,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_finger_2_back_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="SpaceGray">
+          <color rgba="0.741176 0.737255 0.760784 1"/>
         </material>
       </visual>
     </link>
@@ -1437,8 +1466,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_finger_3_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
     </link>
@@ -1468,8 +1497,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_finger_3_front_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
     </link>
@@ -1495,8 +1524,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_finger_3_back_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="SpaceGray">
+          <color rgba="0.741176 0.737255 0.760784 1"/>
         </material>
       </visual>
     </link>
@@ -1518,14 +1547,14 @@
       <inertial>
         <mass value="0.0378"/>
         <origin rpy="0 0 0" xyz="-0.00998 0. 0.01722"/>
-        <inertia ixx="0.00002212955" ixy="0.00000000669" ixz="-0.00000613706" iyy="0.00002663983" iyz="-0.00000001694" izz="0.00000561017"/>
+        <inertia ixx="0.00000419587" ixy="0.00000000141" ixz="-0.00000117570" iyy="0.00000510899" iyz="-0.00000000358" izz="0.00000111263"/>
       </inertial>
       <visual>
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_little_0_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
     </link>
@@ -1549,8 +1578,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_little_0_upper_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
       <inertial>
@@ -1576,8 +1605,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_little_0_front_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
       <inertial>
@@ -1603,8 +1632,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_little_0_back_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="SpaceGray">
+          <color rgba="0.741176 0.737255 0.760784 1"/>
         </material>
       </visual>
       <inertial>
@@ -1635,8 +1664,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_little_1_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
     </link>
@@ -1660,8 +1689,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_little_1_front_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
       <inertial>
@@ -1687,8 +1716,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_little_1_back_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="SpaceGray">
+          <color rgba="0.741176 0.737255 0.760784 1"/>
         </material>
       </visual>
       <inertial>
@@ -1714,8 +1743,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_finger_3_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
       <inertial>
@@ -1745,8 +1774,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_finger_3_front_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="Black">
+          <color rgba="0.094118 0.094118 0.098039 1"/>
         </material>
       </visual>
       <inertial>
@@ -1772,8 +1801,8 @@
         <geometry>
           <mesh filename="01_kistar_son_STL/right_hand_finger_3_back_link.STL"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.2 0.2 0.2 1"/>
+        <material name="SpaceGray">
+          <color rgba="0.741176 0.737255 0.760784 1"/>
         </material>
       </visual>
       <inertial>
